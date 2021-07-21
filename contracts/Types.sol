@@ -40,6 +40,23 @@ contract Types {
         return myMap[_key];
     }
 
+    struct Person{
+        string name;
+        string lastName;
+        uint8 age;
+    }
+
+    Person[] public persons;
+
+    function addToPerson(string memory _name, string memory _lastName, uint8 _age) public {
+        persons.push(Person(_name, _lastName, _age));
+    }
+
+
+
+
+
+
 
   
 }
