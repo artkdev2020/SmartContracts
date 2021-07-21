@@ -6,6 +6,7 @@ contract Types {
     string public str = "Some string";
     byte public bb;
     uint[] public myArray;
+    mapping (uint => string) public myMap;
 
     function setStr(string memory _str) public {
         str = _str;
@@ -27,8 +28,16 @@ contract Types {
         return newArray;
     }
 
-    function getElementById(uint i) public view returns(uint) {
+    function getElementById(uint i) public view returns(uint){
         return myArray[i];
+    }
+
+    function addToMap(uint _key, string memory _value) public{
+        myMap[_key] = _value;
+    }
+
+    function getFromMap(uint _key) public view returns(string memory){
+        return myMap[_key];
     }
 
 
