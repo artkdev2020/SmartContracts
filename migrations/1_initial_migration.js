@@ -1,7 +1,7 @@
 const Migrations = artifacts.require("Migrations");
-const Types = artifacts.require("Types");
+const keyWords = artifacts.require("keyWords");
 
 module.exports = function (deployer) {
   deployer.deploy(Migrations);
-  deployer.deploy(Types);
+  deployer.deploy(keyWords);
 };
