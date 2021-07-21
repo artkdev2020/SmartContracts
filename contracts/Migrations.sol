@@ -2,13 +2,6 @@
 pragma solidity >=0.4.22 <0.9.0;
 
 contract Migrations {
-
-  string public str = "hi gays";
-
-
-
-
-
   address public owner = msg.sender;
   uint public last_completed_migration;
 
@@ -22,9 +15,5 @@ contract Migrations {
 
   function setCompleted(uint completed) public restricted {
     last_completed_migration = completed;
-  }
-
-  function setStr(string memory _str) public {
-    str = _str;
   }
 }
