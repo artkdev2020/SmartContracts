@@ -27,6 +27,10 @@ contract Types {
         return newArray;
     }
 
+    function getElementById(uint i) public view returns(uint) {
+        return myArray[i];
+    }
+
 
   
 }
