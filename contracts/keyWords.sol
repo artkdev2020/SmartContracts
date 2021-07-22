@@ -13,29 +13,38 @@ contract keyWords{
     uint public oneWeek = 1 weeks;
 
     // block
-    bytes32 public blockHash = blockhash(52);
-    address public miner = block.coinbase;
-    uint public difficulty = block.difficulty;
-    uint public gasLimit = block.gaslimit;
-    uint public time = block.timestamp;
-    uint public time2 = now;
+    bytes32 public blockHash;
+    address public miner;
+    uint public difficulty;
+    uint public gasLimit;
+    uint public time;
+    uint public time2;
 
     //transaction
 
-    bytes public data = msg.data;
-    uint public gas = gasleft();
-    address public sender = msg.sender;
-    bytes4 public signature = msg.sig;
-    uint public value = msg.value;
+    bytes public data;
+    uint public gas;
+    address public sender;
+    bytes4 public signature;
+    uint public value;
 
+    function Trx()  public payable {
+        blockHash = blockhash(52);
+        miner = block.coinbase;
+        difficulty = block.difficulty;
+        gasLimit = block.gaslimit;
+        time = block.timestamp;
+        time2 = now;
 
+        //transaction
 
+        data = msg.data;
+        gas = gasleft();
+        sender = msg.sender;
+        signature = msg.sig;
+        value = msg.value;
 
-
-
-
-
-
+    }
 
 
 }
